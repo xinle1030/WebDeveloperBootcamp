@@ -1,0 +1,14 @@
+<h1>Friends List</h1>
+
+<% friends.forEach(function(friend){    %>
+    <li><%= friend %></li>
+<%  })   %>
+
+
+<!--action nids to match the url for us to post a request to-->
+<!--when this form is submitted, it is submitted to /addfriend and trigger the app.post("/addfriend" ...) to run-->
+<form action= "/addfriend" method="POST">
+    <!--name attribute value here is the key that will be added to the url when submit button is pressed to submit this form-->
+    <input type= "text" name="newFriendName" placeholder = "name">
+    <button>I made a new friend</button>
+</form>

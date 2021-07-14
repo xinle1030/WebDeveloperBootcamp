@@ -1,0 +1,18 @@
+<%- include ('partials/header'); -%>
+
+<h1>The Posts Page</h1>
+
+ 
+<!-- for loop, retrieve info from each object -->
+<% for (var i = 0; i < postVar.length; i++){   %>
+    <li><%= postVar[i].title %> - <strong><%= postVar[i].author %></strong> </li>
+<% }   %>
+
+<!-- forEach func, retrieve info from each object -->
+<% postVar.forEach(function(post){   %>
+    <li>
+        <%= post.title %> - <strong><%= post.author %></strong> 
+    </li>
+<% })   %>
+
+<%- include ('partials/footer'); -%>

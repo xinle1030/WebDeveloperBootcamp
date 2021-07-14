@@ -1,0 +1,15 @@
+<!--plug in the variable into <%= %>, ejs will recoganize everything inside those 2 tags as JS code and add to html page-->
+<!--<% %> is used to plug in logic code into them and those codes wont get displayed on html page-->
+
+<%- include ('partials/header'); -%>
+
+<h1>You fell in love with: <%= thingVar.toUpperCase() %></h1>
+
+
+<% if (thingVar.toLowerCase() == "rusty"){  %>
+    <p>GOOD CHOICE! RUSTY IS THE BEST!</p>
+<% }   else{ %>
+    <p>BAD CHOICE! YOU SHOULD HAVE CHOSEN RUSTY!</p>
+<% }    %>
+
+<%- include ('partials/footer'); -%>
