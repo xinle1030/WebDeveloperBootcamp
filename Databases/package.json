@@ -1,0 +1,16 @@
+{
+  "name": "databases",
+  "version": "1.0.0",
+  "description": "## Intro to Databases * What is a database?      * A collection of information / data     * Has an interface (can write code to interact with the data) * SQL (relational / tabular) vs. NoSQL (non-relational, JSON objects)",
+  "main": "cats.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.6.10",
+    "mongoose": "^5.13.3"
+  }
+}
