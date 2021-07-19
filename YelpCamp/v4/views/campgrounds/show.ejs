@@ -1,0 +1,22 @@
+<!--need to go back one folder before to reach partials folder-->
+<%- include ('../partials/header'); -%>
+
+<h1><%=campground.name%></h1>
+
+<img src="<%= campground.image %>">
+
+<p><%= campground.description %></p>
+
+<!--button to take to add new comments page-->
+<p>
+    <a class="btn btn-success" href="/campgrounds/<%= campground._id %>/comments/new">Add New Comment</a>
+</p>
+
+<!--forEach loop to display each comment with author-->
+<% campground.comments.forEach(function(comment){ %>
+    <p>
+        <strong><%= comment.author %></strong> - <%= comment.text %>
+    </p>
+<% }) %>
+
+<%- include ('../partials/footer'); -%>
