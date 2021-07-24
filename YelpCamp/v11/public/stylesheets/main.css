@@ -1,0 +1,20 @@
+/*select img tag inside thumbnail class*/
+.thumbnail img {
+    width: 100%;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+}
+
+/*
+FORM by default is not inline elements
+To make two form buttons to display inline
+*/
+#delete-form {
+    display: inline;
+}

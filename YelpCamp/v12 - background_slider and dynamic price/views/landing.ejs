@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>YelpCamp</title>
+        <!--bootstrap cdn-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/stylesheets/landing.css">
+        <!--modernizer here is to check browser version to make our web app more cross-browser compatible-->
+        <!--make this script to be async by specifying async attribute for this script-->
+        <!--If async is present: The script is executed asynchronously with the rest of the page (the script will be executed while the page continues the parsing)-->
+        <!--If neither async or defer is present: The script is fetched and executed immediately, before the browser continues parsing the page-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript" async></script>
+    </head>
+    <body>
+    
+    <!--styling for flash message-->
+    
+    <!--put the flash message in a container so it has some padding from left and right-->
+    <div class="container">
+        <!--Check if the array length of flash messages with key "error" is > 0 or not-->
+        <% if(error && error.length > 0){ %>
+            <!--bootstrap class danger in red-->
+            <div class="alert alert-danger" role="alert">
+                <%= error %>
+            </div>
+        <% } %>
+        <!--Check if the array length of flash messages with key "success" is > 0 or not-->
+        <% if(success && success.length > 0){ %>
+            <!--bootstrap class success in green-->
+            <div class="alert alert-success" role="alert">
+                <%= success %>
+            </div>
+        <% } %>
+    </div>
+    
+    <div id="landing-header">
+ 		<h1>Welcome to YelpCamp!</h1>
+		<a href="/campgrounds" class="btn btn-lg btn-success">View All Campgrounds</a>
+    </div>
+    
+    <!--attach different slideshows in a list to change the background image-->
+    <ul class="slideshow">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+
+<%- include ('partials/footer'); -%>
